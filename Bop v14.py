@@ -557,7 +557,7 @@ while running:
             if event.key == pygame.K_UP:
                 uarrow_key = "pressed"
             # Detects the space bar when in game over screen to restart
-            if event.key == pygame.K_SPACE and not play_game and start_game and not menu_screen:
+            if event.key == pygame.K_SPACE and not play_game and start_game and not menu_screen and not paused_screen:
                 play_game = True
                 restart_state = True
                 arrow_spawn()
