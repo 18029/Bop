@@ -6,6 +6,7 @@ from pygame import mixer
 from random import choice
 from pygame.locals import *
 
+
 clock = pygame.time.Clock()
 pygame.mixer.pre_init(frequency=22050, size=-16, channels=2, buffer=512)
 pygame.init()
@@ -640,13 +641,6 @@ while running:
             healthbar.sprite.set_health(1000)
             play_game = True
             menu_screen = False
-
-            print(
-                start_game,
-                menu_screen,
-                play_game,
-                music_load)
-
             song_played = "unravel"
 
         if rickroll_button.draw_button():
@@ -858,6 +852,8 @@ while running:
         screen.blit(score_bg, (0, 0))
         get_grade(score_value, song_score)
 
+        # Updates the highscores depending on what song it is
+
         if song_played == "unravel":
             if score_value > highscore_list[0]:
 
@@ -925,6 +921,8 @@ while running:
                 score_str = str(score_value)
                 highscore_w.write(score_str)
 
+        # Replay button
+
         if replay_button.draw_button():
             song_timer = 0
             play_game = True
@@ -934,6 +932,8 @@ while running:
             p_health = 1000
             score_value = 0
             healthbar.sprite.set_health(1000)
+
+        # Quit to menu button
 
         if quit_button2.draw_button():
             rarrow_group.empty()
