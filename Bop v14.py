@@ -3,7 +3,7 @@
 import pygame
 import random
 from pygame import mixer
-from random import randint, choice
+from random import choice
 from pygame.locals import *
 
 clock = pygame.time.Clock()
