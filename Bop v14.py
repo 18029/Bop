@@ -5,7 +5,6 @@ import random
 from pygame import mixer
 from random import randint, choice
 from pygame.locals import *
-import os
 
 clock = pygame.time.Clock()
 pygame.mixer.pre_init(frequency=22050, size=-16, channels=2, buffer=512)
